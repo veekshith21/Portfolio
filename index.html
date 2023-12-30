@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Veekshith Reddy</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/aca771d7fc.js" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="logo"> 
+                    <img src="images/image-removebg.png">
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li class="list active">
+                            <a href="#header">
+                                <span class="icon">
+                                    <ion-icon name="home-outline"></ion-icon></span>
+                                <span class="text">Home</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#about">
+                                <span class="icon">
+                                    <ion-icon name="person-outline"></ion-icon></span>
+                                <span class="text">About</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#projects">
+                                <span class="icon">
+                                    <ion-icon name="code-slash-outline"></ion-icon></span>
+                                <span class="text">Projects</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#contact">
+                                <span class="icon">
+                                    <ion-icon name="call-outline"></ion-icon></span>
+                                <span class="text">Contact</span>
+                            </a>
+                        </li>
+                        <div class="indicator"></div>
+                    </ul>
+                </div>
+                <script>
+                const list = document.querySelectorAll('.list');
+                function activelink(){
+                    list.forEach((item) =>
+                    item.classList.remove('active'));
+                    this.classList.add('active');
+                }
+                list.forEach((item) =>
+                item.addEventListener('click',activelink));
+                </script>
+                <div class="header-text">
+                    <p>Software Development Engineer</p>
+                    <h1>Hi, I'm <span>Veekshith</span><br> From India!</h1>
+                </div>
+            </div>
+
+        </div>
+<!------------------------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img class="scrapbook" src="images/DSC_0197.JPG" alt="Animated Image">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="subtitle">About Me !</h1>
+                        <p1>Technical enthusiast with a background in Data Structures, Python, and Machine Learning, eager to join a dynamic
+                            team as a software developer to apply problem-solving skills and drive software excellence.
+                            </p1>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('Experince')">Experince</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Python</span></li>
+                                <li><span>Front-end Development (HTML,CSS)</span></li>
+                                <li><span>Machine Learning</span></li>
+                                <li><span>Data base management systems</span></li>
+                                <li><span>Data Structures</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>B.Tech in Computer Science (2020-2024)</span><br>Indian Institute of Information Technology Dharwad: CGPA - 7.33
+                                </li>
+                                <li><span>Intermediate MPC (2018-2020)</span><br>Narayana Junior College - 95.9%<br></li>
+                                <li><span>Matriculation</span><br>Tejaswi High School: CGPA - 9.5</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experince">
+                            <ul>
+                                <li><span>Xiaomi Ode2Code 3.0</span><br>I have secured a position in the top 50 participants of Ode2Code 3.0, a nationwide coding competition that
+                                    united students from E-schools in India (2024-2026) to showcase their coding skills through challenging rounds,
+                                    including quizzes and innovative coding projects. <a href=""><i class="fa-solid fa-link"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-----------------        --------------------------->
+        <div id="projects">
+            <div class="container">
+                <h1 class="subtitle">My Projects!</h1>
+                <div class="project-list">
+                    <div class="project">
+                        <img src="images/weather.2.avif">
+                        <div class="layer">
+                            <h3>Weather forecast</h3>
+                            <p>Built an basic application to find the weather conditions across the globe by using React.js,
+                                Vite framework for front-end, CSS to design the web application and Postman API to fetch the weather.</p>
+                            <a href="https://veekshith21.github.io/weather_api/"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="images/project21.jpg">
+                        <div class="layer">
+                            <h3>Respiration Rate Detection from PPG signals</h3>
+                            <p>This is an Neural Network project in which we analyze/monitor the
+                                respiratory signals from ppg. The tools used are 5-fold Cross Validation, 1-D CNN, Matplot.</p>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="images/random.1.avif">
+                        <div class="layer">
+                            <h3>Random quote generator</h3>
+                            <p>Build a project that helps us find quotes based on different categories. The Tech
+                                stack used are React.js, HTML, CSS, Bootstrap.</p>
+                            <a href="https://github.com/veekshith21/Random_quote_generator.git"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://docs.google.com/spreadsheets/d/19aLQtdV2MX6BiZQ9p2y2DEbx7BQynQstmdnKYOeuCF4/edit?usp=sharing" class="btn">See more</a>
+            </div>
+        </div>
+        <!------------>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="con-left">
+                        <h1 class="subtitle">Contact Me!</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>20bcs111@iiitdwd.ac.in</p>
+                        <p><i class="fa-solid fa-mobile"></i>7093791070</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/veekshith_021?igsh=MXM5Znl6emN4cnM3bw=="><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://github.com/veekshith21"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/veekshith-reddy-ravula-65348422a/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://leetcode.com/veekshith_021/"><i class="fa-solid fa-laptop-code"></i></a>
+                        </div>
+                        <a href="images/Veekshith Reddy Ravula.pdf" download class="btn btn2">Resume\CV</a>
+                    </div>
+                    <div class="con-right">
+                        <img src="images/profile-pic (7).png" alt="Default Image" >
+                        <img class="top-img" src="images/profile-pic (6).png" alt="Hover Image" >
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright@! Veekshith here <i class="fa-solid fa-heart"></i>.</p>
+            </div>
+        </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+            
+            
+        }
+    </script>
+
+    </body>
+</html>

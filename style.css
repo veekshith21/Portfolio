@@ -1,0 +1,758 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg3.png);
+    background-color: #080808;
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+}
+.container {
+    padding: 10px 5%; 
+
+}
+
+.logo img{
+    width: 200px; 
+}
+
+:root{
+    --clr: black;
+}
+
+
+
+.nav {
+    display: flex;
+    position: fixed;
+    top: 7mm;
+    right: 20mm;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    
+    height: 70px;
+
+
+}
+
+.nav ul{
+    display: flex;
+    width: 250px;
+}
+
+.nav ul li{
+    
+    list-style: none;
+    width: 65px;
+    height: 65px;
+    z-index: 1;
+    position: relative;
+    
+    
+}
+
+.nav ul li a{
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    
+}
+
+.nav ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+
+.nav ul li.active a .icon{
+    transform: translateY(-35px);
+
+}
+
+.nav ul li a .text{
+    position: absolute;
+    color: var(--clr);
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    
+    
+
+} 
+
+.nav ul li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator{
+    position: absolute;
+    top: -40%;
+    width: 60px;
+    height: 60px;
+    background: darkgoldenrod;
+    border-radius: 60%;
+    border: 6px solid var(--clr) ;
+    transition: 0.5s;
+}
+
+.indicator::before{
+
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -28px;
+    width: 20px;
+    height: 2px;
+    background: transparent;
+    border-top-right-radius: 10px;
+    box-shadow: 1px -10px 0 0 var(--clr);
+
+}
+
+.indicator::after{
+
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 2px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--clr);
+
+}
+
+.nav ul li:nth-child(1).active ~ .indicator{
+    transform:translateX(calc(63px * 0))
+}
+.nav ul li:nth-child(2).active ~ .indicator{
+    transform:translateX(calc(63px * 1))
+}
+.nav ul li:nth-child(3).active ~ .indicator{
+    transform:translateX(calc(63px * 2))
+}
+.nav ul li:nth-child(4).active ~ .indicator{
+    transform:translateX(calc(63px * 3))
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+
+.header-text p{
+    font-family: League Spartan;
+    font-variant: normal;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    font-family: League Spartan;
+}
+.header-text h1 span{
+    color:#ffba08;
+}
+
+/*--------------*/
+
+#about{
+    padding: 80px 0;
+    color: #f5cf05;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+@keyframes scrapbookAnimation {
+    0% {
+      transform: scale(1) rotate(0) translate(0, 0);
+    }
+    25% {
+      transform: scale(1.1) rotate(-5deg) translate(10px, -10px);
+    }
+    50% {
+      transform: scale(1) rotate(0) translate(0, 0);
+    }
+    75% {
+      transform: scale(1.1) rotate(5deg) translate(-10px, 10px);
+    }
+    100% {
+      transform: scale(1) rotate(0) translate(0, 0);
+    }
+  }
+  
+  
+  
+  
+  
+  
+
+.about-col-1 img.scrapbook{
+    width: 90%;
+    
+    border-width: 10mm;
+    border-radius: 15px;
+    animation: scrapbookAnimation 0s ease-in-out infinite;
+    
+    
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color:darkgoldenrod;
+    font-family: League Spartan;
+    padding-bottom: 10px;
+
+}
+
+
+.about-col-2 p1{
+    color: #ababab;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: darkgoldenrod;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+
+}
+
+
+.tab-contents ul li{
+    list-style: disc;
+    margin: 10px;
+    font-size: 14px;
+    
+}
+.tab-contents ul li span{
+    color: #ababab;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tab-contents ul li a{
+    color: darkgoldenrod;
+    font-size: medium;
+    padding: 5px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display:block;
+}
+
+/*--------------*/
+
+#projects{
+    padding: 50px 0;
+
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    height: 10cm;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),darkgoldenrod);
+    border-radius: 10px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.layer h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: League Spartan;
+    text-decoration: overline;
+    color: #f4691b;
+    
+}
+
+.layer p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: beige;
+    font-style: italic;
+    font-weight: 200;
+
+}
+
+.layer a{
+    margin-top: 20px;
+    color:#fff200;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.project:hover img{
+    transform: scale(1.1);
+}
+
+.project:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid darkgoldenrod;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition:background 0.5s;
+
+}
+
+.btn:hover{
+    background: darkgoldenrod;
+
+
+}
+
+/*--------------*/
+
+.con-left{
+    flex-basis: 35%;
+}
+
+.con-left p{
+    margin-top: 30px;
+
+}
+
+.con-left p i{
+    color: darkgoldenrod;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+
+.social-icons a:hover{
+    color:darkgoldenrod;
+    transform: translateY(-5px);
+}
+
+.btn btn2{
+    display: inline-block;
+    background: darkgoldenrod;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: #262626;
+    font-weight: 300px;
+    margin-top: 20px;
+}
+
+.con-right{
+    width: 500px;
+    height:500px;
+    right: 1mm;
+    position: relative;
+
+
+
+}
+
+.con-right img{
+    width: 50%;
+    height:50%;
+    border-radius: 100%;
+    
+    border-color: white;
+}
+
+.top-img{
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: 0;
+}
+
+.top-img:hover{
+    opacity: 1;
+}
+
+
+/*------------------------------------------------*/
+
+/* Add this CSS at the end of your existing CSS */
+
+@media only screen and (max-width: 600px) {
+    /* Adjustments for smaller screens */
+
+    #header {
+        background-size: 100%; /* Adjust background size for better visibility */
+    }
+
+    .logo {
+        justify-content: start;
+        position: relative;
+        right: 1.5cm;
+    }
+
+    .nav {
+        display: flex;
+        position: fixed;
+        top: 5mm;
+        right: 5mm;
+        padding: 10px;
+        background: #fff;
+        border-radius: 5px;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        
+        height: 50px;
+        width: 200px;
+    
+    
+    }
+    
+    .nav ul{
+        display: flex;
+        width: 175px;
+    }
+    
+    .nav ul li{
+        
+        list-style: none;
+        width: 60px;
+        height: 65px;
+        z-index: 1;
+        position: relative;
+        
+        
+    }
+    
+    .nav ul li a{
+        
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        
+    }
+    
+    .nav ul li a .icon{
+        position: relative;
+        display: block;
+        line-height: 75px;
+        font-size: 1em;
+        text-align: center;
+        transition: 0.5s;
+        color: var(--clr);
+    }
+    
+    .nav ul li.active a .icon{
+        transform: translateY(-25px);
+    
+    }
+    
+    .nav ul li a .text{
+        position: absolute;
+        color: var(--clr);
+        font-weight: bold;
+        font-size: 1.2em;
+        letter-spacing: 0em;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translateY(20px);
+        font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+        
+        
+    
+    } 
+    
+    .nav ul li.active a .text{
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    
+    .indicator{
+        position: absolute;
+        top: -30;
+        width: 45px;
+        height: 45px;
+        background: darkgoldenrod;
+        border-radius: 60%;
+        
+        transition: 0.5s;
+    }
+    
+    .indicator::before{
+    
+        content: '';
+        position: absolute;
+        top: 30;
+        left: -28px;
+        width: 20px;
+        height: 2px;
+        background: transparent;
+        border-top-right-radius: 10px;
+        box-shadow: 1px -10px 0 0 var(--clr);
+    
+    }
+    
+    .indicator::after{
+    
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -22px;
+        width: 20px;
+        height: 2px;
+        background: transparent;
+        border-top-right-radius: 20px;
+        box-shadow: 1px -10px 0 0 var(--clr);
+    
+    }
+    
+    .nav ul li:nth-child(1).active ~ .indicator{
+        transform:translateX(calc(43.5px * 0))
+    }
+    .nav ul li:nth-child(2).active ~ .indicator{
+        transform:translateX(calc(43.5px * 1))
+    }
+    .nav ul li:nth-child(3).active ~ .indicator{
+        transform:translateX(calc(43.5px * 2))
+    }
+    .nav ul li:nth-child(4).active ~ .indicator{
+        transform:translateX(calc(43.5px * 3))
+    }
+
+    
+    
+
+    
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text p {
+        font-size: 18px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    
+
+    .subtitle {
+        font-size: 45px;
+        
+
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    .tab-links {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .tab-contents ul li {
+        font-size: 12px;
+    }
+
+    .project-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+
+    .project img {
+        height: 8cm;
+    }
+
+    .layer {
+        padding: 0 20px;
+        font-size: 12px;
+    }
+
+    .layer h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .con-left {
+        flex-basis: 100%;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+
+    .copyright {
+        padding: 5px 0;
+        font-size: 12px;
+    }
+
+    .con-right {
+        width: 100%;
+        height: auto;
+        flex-basis: 40%;
+        
+        justify-content: center;
+        align-items: center;
+        left: 3cm;
+    }
+
+    .con-right img {
+        width: 100%;
+        height: auto;
+        
+    }
+}
+
+
+
+
+
