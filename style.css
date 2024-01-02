@@ -503,7 +503,8 @@ body{
     /* Adjustments for smaller screens */
 
     #header {
-        background-size: 100%; /* Adjust background size for better visibility */
+        background-size: 100%;
+        background-position: top; /* Adjust background size for better visibility */
     }
 
     .logo {
@@ -578,7 +579,7 @@ body{
         position: absolute;
         color: var(--clr);
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 1em;
         letter-spacing: 0em;
         transition: 0.5s;
         opacity: 0;
